@@ -1,0 +1,12 @@
+{
+  "name": "JouClub",
+  "displayName": "JouClub",
+  "expo": {
+    "name": "JouClub",
+    "slug": "JouClub",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
