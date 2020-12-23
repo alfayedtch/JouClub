@@ -20,11 +20,7 @@ class Accueil extends React.Component{
     initializeDatabase(): void {
         db.transaction(tx => {
             tx.executeSql(
-                "create table if not exists\
-                    note (\
-                        note_id integer primary key autoincrement not null,\
-                        text text not null\
-                );"
+                "create table if not exists Club (club_id integer primary key autoincrement not null,name text not null);create table if not exists Joueur (joueur_id integer primary key autoincrement not null,name text not null,club_id integer fpreign key references Club)"
             );
         }, (e) => { console.log("ERREUR + " + e) },
             () => { console.log("OK + ") }
