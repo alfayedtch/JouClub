@@ -5,13 +5,15 @@ import Clubitem from './Clubs/Clubitem';
 import Club from '../BD/Club'
 import * as SQLite from 'expo-sqlite';
 
-const db = SQLite.openDatabase("database.db");
+
 
 class Accueil extends React.Component{
 
     constructor(props){
+        const db = SQLite.openDatabase("database.db");
         super(props)
-        this.state = { films : [] }
+        this.state = { 
+            films : [] }
     }
 
     //Initialisation de la base de données
